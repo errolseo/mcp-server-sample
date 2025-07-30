@@ -27,16 +27,9 @@ logger = logging.getLogger(__name__)
   default="INFO",
   help="Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
 )
-@click.option(
-  "--json-response",
-  is_flag=True,
-  default=False,
-  help="Enable JSON responses instead of SSE streams",
-)
 def main(
   port: int,
   log_level: str,
-  json_response: bool,
 ) -> int:
   """
   Starts the MCP (Multi-Agent Communication Protocol) server with defined tools
